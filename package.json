@@ -1,0 +1,12 @@
+{
+  "name": "sailingdigitalgoods",
+  "version": "1.0.0",
+  "description": "Website for sailing digital goods",
+  "author": "Viraj Bahulkar",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

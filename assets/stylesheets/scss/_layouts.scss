@@ -1,0 +1,64 @@
+@import "../scss/variables.scss";
+
+.container {
+	width: 1170px;
+}
+
+.navbar {
+	margin-bottom: 0!important;
+	border-radius: 0!important;
+}
+
+// .form-group {
+// 	display: inline-block!important;
+// }
+
+.widget_search_filter {
+	margin-top: 30px;
+	
+	hr {
+		margin-top: 10px;
+	    margin-bottom: 15px;
+	}
+	.dropdown {
+		margin-bottom: 15px;
+	}
+}
+
+
+.category-wrapper {
+	ul {
+		
+		width: 100%;
+		padding-left: 0;
+		li {
+			
+			display: block;
+			padding-right: 20px;
+			list-style-type: disc;
+		}
+	}
+}
+
+.prdt-wrap {
+	float: left;
+	border: 1px solid #666;
+	height: 260px;
+	.prdt-img {
+		padding: 20px;
+	}
+	p {
+			
+		margin: 20px;
+
+	}
+}
+
+ul.filetypes {
+	padding-left: 0;
+	li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+}
+
