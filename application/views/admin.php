@@ -1,4 +1,4 @@
-<h1>Categories</h1>
+<h1>Product Details</h1>
 
 <table class="table table-striped">
     <tbody>

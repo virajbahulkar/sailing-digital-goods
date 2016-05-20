@@ -7,6 +7,7 @@
 	<?php 
 		echo link_tag('assets/stylesheets/css/global.css', 'stylesheet'); 
 		echo link_tag('assets/stylesheets/css/bootstrap.min.css', 'stylesheet'); 
+		
 	?>
 </head>
 <body>
@@ -25,12 +26,14 @@
 								<span class="icon-bar"></span>
 							</button>
 							<a class="navbar-brand" href="<?php echo base_url(); ?>admin">Dashboard</a>
-							<a class="" href="<?php echo base_url(); ?>admin/new_product">Add Product</a>
-							<a class="" href="<?php echo base_url(); ?>admin/new_category">Add category</a>
-							<a class="" href="<?php echo base_url(); ?>admin/new_file_type">Add file types</a>
-
+							<a class="admin-topbar-links" href="<?php echo base_url(); ?>admin/new_product">Add Product</a>
+							<a class="admin-topbar-links" href="<?php echo base_url(); ?>admin/new_category">Add category</a>
+							<a class="admin-topbar-links" href="<?php echo base_url(); ?>admin/new_file_type">Add file types</a>
+							
 					    </div>
-					    
+					    <div class="admin-topbar-links link-to-admin-panel pull-right">
+					    	<a href="<?php echo base_url(); ?>">Visit Website</a>
+					    </div>
 				    </div><!-- /.container-fluid -->
 				</nav>
 				

@@ -1,13 +1,16 @@
 	<div class="row">
 		<div class="widget_search_filter">
-			<div class="col-md-3">
+			<div class="col-xs-3">
 				<div class="category-wrapper">
-					<p >Category</p>
+					<p >Categories</p>
 					<ul>
+						<li>
+							<a href="<?php echo base_url(); ?>site/show_all">Show All</a>
+						</li>
 						<?php if(!empty($categories)) : foreach($categories as $category) : ?>
 										
 						<li>
-							<a href="#"><?php echo $category['category_name']; ?></a>
+							<a href="<?php echo base_url(); ?>site/products_by_category/<?php echo $category['id']; ?>"><?php echo $category['category_name']; ?></a>
 						</li>
 							
 						<?php endforeach; ?>
@@ -18,14 +21,14 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-9">
+			<div class="col-xs-9">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-xs-12">
 						<p >File Types</p>
 						<ul class="filetypes">
 							<?php if(!empty($fileTypes)) : foreach($fileTypes as $filetype) : ?>
 									
-							<li><a href="#"><?php echo $filetype['file_type_name']; ?></a></li>
+							<li><a href="<?php echo base_url(); ?>site/products_by_filetype/<?php echo $filetype['id']; ?>"><?php echo $filetype['file_type_name']; ?></a></li>
 
 							<?php endforeach; ?>
 							
@@ -36,13 +39,14 @@
 							<?php endif; ?>
 						</ul>
 					</div>
-				</div>		
-				<div class="row">
-					<div class="col-md-12">
+					<div class="col-xs-12">
 						<p>Total <?php echo $num_results; ?> results</p>
 					</div>
 					<?php if(!empty($products_data)) : foreach($products_data as $pdata) : ?>
-					<div class="col-md-3">
+						
+							
+						
+					<div class="col-xs-3">
 						<div class="prdt-wrap">
 						
 							<a href="<?php echo base_url(); ?>site/product_details/<?php echo $pdata['id']; ?>">
@@ -50,7 +54,8 @@
 								<div class="prdt-img">
 									<img src="<?php echo base_url() . 'uploads/thumbs/' . $pdata['product_image'];  ?>" alt="" class="img-responsive ">
 								</div>
-								
+								<p class="text-center"><?php echo $pdata['file_type_name']; ?></p>
+								<hr>
 								<p class="text-center">
 								<?php if($pdata['product_price']=="0")
 								{
@@ -66,13 +71,18 @@
 							    
 						</div>
 					</div>
-
 					     <?php endforeach; ?>
 					<?php endif; ?>
 				</div>
+					
+				
+					
+							
+					    
+				
 				<hr>
-				<div class="row">
-					<div class="col-md-12">
+				
+					<div class="col-xs-12">
 						<nav>
 						  <?php if (strlen($pagination)): ?>
 						    <ul class="pagination">
@@ -86,7 +96,7 @@
 						  
 						</nav>
 					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

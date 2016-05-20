@@ -26,7 +26,7 @@
 			  	    </div>
 			  	    
 			  	    <div class="form-group">	
-			  	       	<label for="product_image">File input</label>
+			  	       	<label for="product_image">Product Image</label>
 			  	       	<input type="file" name="userfile" id="product_image">
 			  	       	<p class="help-block">Example block-level help text here.</p>
 			  	     </div>
@@ -47,7 +47,7 @@
 			  	       <input name="product_price" type="text" class="form-control" id="product_price" placeholder="Enter price">
 			  	     </div>
 			  	    <div class="form-group">
-			  	      <label for="product_tags">Tags</label>
+			  	      <label for="product_tags">Product Tags</label>
 			  	      <input name="product_tags" type="text" class="form-control" id="product_tags" placeholder="Enter Tags">
 			  	    </div>
 			  	    <div>

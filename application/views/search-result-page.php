@@ -1,29 +1,92 @@
 <div class="row">
-	<?php foreach($query as $item) : ?> 
+	<div class="widget_search_filter">
+		<div class="col-xs-3">
+			<div class="category-wrapper">
+				<p >Categories</p>
+				<ul>
+					<li>
+						<a href="<?php echo base_url(); ?>site/show_all">Show All</a>
+					</li>
+					<?php if(!empty($categories)) : foreach($categories as $category) : ?>
+									
+					<li>
+										
+						<a class="<?php if($category['id'] == $this->uri->segment(3)) { echo "active"; } ?>" href="<?php echo base_url(); ?>site/products_by_category/<?php echo $category['id']; ?>"><?php echo $category['category_name']; ?></a>
+					</li>
+						
+					<?php endforeach; ?>
 
-		<div class="col-md-3">
-			<div class="prdt-wrap">
-			
-				<a href="<?php base_url(); ?>site/product_details/<?php echo $item->id; ?>">
-					<p class="text-center"><?php echo $item->product_name; ?></p>
-					<div class="prdt-img">
-						<img src="<?php echo base_url() . 'uploads/thumbs/' . $item->product_image;  ?>" alt="" class="img-responsive ">
-					</div>
-					
-					<p class="text-center">
-					<?php if($item->product_price == "0")
-					{
-						echo "Free Download";
-					}
-					else
-					{
-						echo "Rs. ".$item->product_price;
-					}
-					?>
-					</p>
-				</a>
-				    
+					<?php else : ?>
+						
+					<?php endif; ?>
+				</ul>
 			</div>
 		</div>
-	<?php 	endforeach; ?>
+		<div class="col-xs-9">
+			
+			<div class="row">
+				<div class="col-xs-12">
+					<p >File Types</p>
+					<ul class="filetypes">
+						<?php if(!empty($fileTypes)) : foreach($fileTypes as $filetype) : ?>
+								
+						<li><a class="<?php if($filetype['id'] == $this->uri->segment(3)) { echo "active"; } ?>" href="<?php echo base_url(); ?>site/products_by_filetype/<?php echo $filetype['id']; ?>"><?php echo $filetype['file_type_name']; ?></a></li>
+
+						<?php endforeach; ?>
+						
+						<?php else : ?>
+
+						<p>No records were returned.</p>
+							
+						<?php endif; ?>
+					</ul>
+				</div>
+				<!-- <div class="col-xs-12">
+					<p>Total <?php echo $num_results; ?> results</p>
+				</div> -->
+				<?php foreach($search_result as $sresult) : ?> 
+			
+				<div class="col-xs-3">
+					<div class="prdt-wrap">
+					
+						<a href="<?php echo base_url(); ?>site/product_details/<?php echo $sresult['id']; ?>">
+							<p class="text-center"><?php echo $sresult['product_name']; ?></p>
+							<div class="prdt-img">
+								<img src="<?php echo base_url() . 'uploads/thumbs/' . $sresult['product_image'];  ?>" alt="" class="img-responsive ">
+							</div>
+							
+							<p class="text-center">
+							<?php if($sresult['product_price'] == "0")
+							{
+								echo "Free Download";
+							}
+							else
+							{
+								echo "Rs. ".$sresult['product_price'];
+							}
+							?>
+							</p>
+						</a>
+						    
+					</div>
+				</div>
+				<?php 	endforeach; ?>
+				<div class="col-xs-12">
+					<nav>
+
+					  <?php if (strlen($pagination)): ?>
+					    <ul class="pagination">
+							    
+					    	
+						  	<?php echo $pagination; ?> 	
+
+					    </ul>
+					  <?php endif; ?>
+					    	    
+					  
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

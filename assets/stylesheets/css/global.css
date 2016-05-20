@@ -60,7 +60,8 @@
  *    ######## ##     ##    ##     #######   #######     ##     ######  
  */
 .container {
-  width: 1170px;
+  width: 1170px !important;
+  max-width: none;
 }
 
 .navbar {
@@ -70,6 +71,11 @@
 
 .widget_search_filter {
   margin-top: 30px;
+  float: left;
+  width: 100%;
+}
+.widget_search_filter > .col-md-3 {
+  border-right: 1px solid #E4E4E4;
 }
 .widget_search_filter hr {
   margin-top: 10px;
@@ -92,13 +98,11 @@
 .prdt-wrap {
   float: left;
   border: 1px solid #666;
-  height: 260px;
-}
-.prdt-wrap .prdt-img {
-  padding: 20px;
+  height: 276px;
+  margin-bottom: 20px;
 }
 .prdt-wrap p {
-  margin: 20px;
+  margin-top: 10px;
 }
 
 ul.filetypes {
@@ -107,4 +111,33 @@ ul.filetypes {
 ul.filetypes li {
   display: inline-block;
   margin-right: 20px;
+}
+
+.active {
+  border-bottom: 1px solid;
+}
+
+.search {
+  margin-top: 20px;
+}
+.search .form-group {
+  display: inline-block;
+  width: 86%;
+}
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 20px;
+  border-right: 1px solid #C3B8B8;
+  line-height: 20px;
+}
+
+.admin-topbar-links {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 16px;
+  line-height: 20px;
 }

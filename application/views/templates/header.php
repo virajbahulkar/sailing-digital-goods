@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
 	<title>Sailing Digital Goods</title>
 	<?php 
 		echo link_tag('assets/stylesheets/css/global.css', 'stylesheet'); 
-		echo link_tag('assets/stylesheets/css/bootstrap.min.css', 'stylesheet'); 
-	?>
+		echo link_tag('assets/stylesheets/css/bootstrap.min.css', 'stylesheet');
+		?>
 </head>
 <body>
 
@@ -28,16 +28,20 @@
 					    </div>
 				    </div><!-- /.container-fluid -->
 				</nav>
+			</div>
+			<div class="col-md-6 col-md-offset-6">
 				<div class="search">
-					<form action="<?php base_url(); ?>site/search">
+					<form action="<?php base_url(); ?>site/search" method="post">
 						<div class="form-group"> 
-							<input type="text" class="form-control" id="search" name="product_name" placeholder="Search for product name...">
+							<input type="text" class="form-control" id="search" name="search" placeholder="Search">
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
 					
 				</div>
+			</div>
+				
 				
 			</div>
-		</div>
+		
 				
